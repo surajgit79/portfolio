@@ -559,3 +559,40 @@ scrollToTopBtn.addEventListener('mouseleave', function() {
     this.style.transform = 'translateY(0)';
     this.style.boxShadow = '0 10px 30px rgba(0, 212, 255, 0.3)';
 });
+
+// Header name reveal: show the name in top-left after hero leaves view or after delay
+(function() {
+    const navbar = document.querySelector('.navbar');
+    const hero = document.querySelector('#home');
+    const SHOW_DELAY = 2000; // ms fallback
+    let shownByTimeout = false;
+
+    // Fallback timeout: show name after a short delay if user doesn't scroll
+    const fallback = setTimeout(() => {
+        if (navbar) {
+            navbar.classList.add('show-name');
+            shownByTimeout = true;
+        }
+    }, SHOW_DELAY);
+
+    if (hero && navbar) {
+        const headerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    // hero left viewport — reveal name
+                    navbar.classList.add('show-name');
+                    clearTimeout(fallback);
+                } else {
+                    // hero in view — hide name unless already shown by timeout
+                    if (!shownByTimeout) navbar.classList.remove('show-name');
+                }
+            });
+        }, { threshold: 0, rootMargin: '-80px 0px 0px 0px' });
+
+        headerObserver.observe(hero);
+    } else if (navbar) {
+        // If no hero section, always show name
+        navbar.classList.add('show-name');
+        clearTimeout(fallback);
+    }
+})();

@@ -392,6 +392,35 @@ body::before {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
+/* Header logo visibility: initially hide logo, reveal later */
+.navbar .logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    will-change: opacity, transform;
+}
+
+.navbar .logo .logo-text {
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.navbar.show-name .logo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Ensure mobile keeps logo visible for navigation clarity */
+@media (max-width: 768px) {
+    .navbar .logo {
+        opacity: 1;
+        transform: none;
+    }
+}
 
 /* Hero Section */
 .hero {
