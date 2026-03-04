@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Gupta | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-text">Suraj</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for work</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting">Hi, I'm</span>
+                <span class="name">Suraj Gupta</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor">|</span>
+            </p>
+            <div class="hero-description">
+                BCA Student passionate about building innovative solutions with 
+                <strong>Data Science</strong>, <strong>Cybersecurity</strong>, and <strong>AI Integration</strong>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Contact Me</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Years</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% Dedication</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Building the Future with Code</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-card-main">
+                    <div class="about-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Currently pursuing <strong>BCA (Bachelor of Computer Applications)</strong> with a focus on practical implementation of emerging technologies.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Data</h3>
+                    <p>Passionate about AI integration, machine learning models, and extracting insights from complex datasets.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Committed to building secure applications and understanding the latest security practices.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Always exploring how technology can solve real-world problems and align with future needs.</p>
+                </div>
+            </div>
+            <div class="about-extra">
+                <div class="extra-card">
+                    <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                    <p>Hetauda, Nepal</p>
+                </div>
+                <div class="extra-card">
+                    <h4><i class="fas fa-language"></i> Languages</h4>
+                    <p>English, Nepali, Hindi</p>
+                </div>
+                <div class="extra-card">
+                    <h4><i class="fas fa-heart"></i> Interests</h4>
+                    <p>Open Source, Tech Innovation, Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Tech Arsenal</h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skills-category">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Tailwind</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-database"></i> Database</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">MySQL</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Socket.io</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-progress">
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Frontend Development</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--progress: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Backend Development</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--progress: 85%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>Database & Data</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--progress: 80%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-info">
+                        <span>AI & Machine Learning</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="--progress: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="c">C</button>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/EduCraft" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #00d4ff, #8338ec);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">AI/ML</span>
+                        <h3>EduCraft</h3>
+                        <p>AI-based play & learn model for interactive education experiences</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/LCE-hacakathon" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #ff006e, #ff4d94);">
+                            <i class="fas fa-notes-medical"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">AI/ML</span>
+                        <h3>LCE Hackathon</h3>
+                        <p>AI-driven notes generation model for automated study materials</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>AI</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/Chat-Application" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #3a86ff, #00f2fe);">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Full Stack</span>
+                        <h3>Chat Application</h3>
+                        <p>Real-time multi-user chat with MERN Stack and Socket.io</p>
+                        <div class="project-tech">
+                            <span>MERN</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/PayWatch" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #06d6a0, #00b4d8);">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Finance</span>
+                        <h3>PayWatch</h3>
+                        <p>Dollar Card Tracker for managing expenses and finances</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="python">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/StudySync" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #8338ec, #ff006e);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Education</span>
+                        <h3>StudySync</h3>
+                        <p>Collaborative Learning Platform for students</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="python">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/Hisaab" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #fb5607, #ffbe0b);">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Finance</span>
+                        <h3>Hisaab</h3>
+                        <p>Accounting Software with Nepal VAT rules and regulations</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Tax</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="python">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/Web-Scrapping-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #06d6a0, #118ab2);">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Data</span>
+                        <h3>Web Scrapping</h3>
+                        <p>Data extraction and analysis from multiple web sources</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scraping</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-category="c">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="https://github.com/surajgit79/tic-tac-toe" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="project-icon" style="background: linear-gradient(135deg, #ef476f, #ffd166);">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Game</span>
+                        <h3>Tic-Tac-Toe</h3>
+                        <p>Classic game implementation showcasing game logic and algorithms</p>
+                        <div class="project-tech">
+                            <span>C</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-more">
+                <a href="https://github.com/surajgit79" target="_blank" class="btn btn-outline">
+                    <span>View All Projects</span>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:surajg7922@gmail.com">surajg7922@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+9779815239722">+977-9815239722</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Hetauda, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/surajgit79" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A4%9C-%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4%E0%A4%BE-3628932b2" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span><i class="fas fa-code"></i> Suraj Gupta</span>
+                </div>
+                <p>&copy; 2026 All rights reserved. Built with <i class="fas fa-heart"></i></p>
+                <div class="footer-links">
+                    <a href="https://github.com/surajgit79" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/surajgupta" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
